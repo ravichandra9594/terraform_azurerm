@@ -32,7 +32,7 @@ resource "azurerm_network_interface" "nic" {
     public_ip_address_id          = azurerm_public_ip.pip.id
   }
 }
-output "rg_id" {
+output "public_ip" {
   value = azurerm_network_interface.nic.ip_configuration.public_ip_address_id
 }
 resource "azurerm_managed_disk" "disk" {
