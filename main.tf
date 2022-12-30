@@ -33,7 +33,7 @@ resource "azurerm_network_interface" "nic" {
   }
 }
 output "public_ip" {
-  value = azurerm_network_interface.nic.ip_configuration.public_ip_address_id
+  value = azurerm_network_interface.nic.ip_configuration['public_ip_address_id']
 }
 resource "azurerm_managed_disk" "disk" {
   name                 = var.disk_name
